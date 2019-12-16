@@ -67,10 +67,10 @@ def demo():
                 h = hsv[:,:,0]
                 s = hsv[:,:,1]
                 v = hsv[:,:,2]
-                print h.mean(), s.mean(), v.mean()
+                print("h = {}, s = {}, v={}".format(h.mean(), s.mean(), v.mean()))
     
-                fname = "imgs/img_{}.jpg".format(calendar.timegm(time.gmtime()));
-                # print fname
+                fname = "imgs/img_{}.jpg".format(calendar.timegm(time.gmtime()))
+                # print(fname)
                 cv2.imwrite(fname, frame)
                 if v.mean() > 200:
                     redLightOn()
